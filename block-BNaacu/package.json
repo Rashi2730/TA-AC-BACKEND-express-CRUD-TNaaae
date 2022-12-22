@@ -1,14 +1,19 @@
 {
   "name": "altcampus-assignment",
   "version": "1.0.0",
-  "description": "",
-  "main": "",
+  "main": "school.js",
   "scripts": {
-    "test": "jest --passWithNoTests"
+    "test": "jest --passWithNoTests",
+    "start": "node app.js"
   },
   "author": "AltCampus",
   "license": "GNU GPL V3",
   "dependencies": {
-    "jest": "^26.0.1"
-  }
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "jest": "^26.0.1",
+    "mongoose": "^6.8.1"
+  },
+  "keywords": [],
+  "description": ""
 }
