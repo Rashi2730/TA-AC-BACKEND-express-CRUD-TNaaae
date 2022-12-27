@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      /* body {
+          text-align: center;
+        } */
+      .header {
+        overflow: hidden;
+        /* background-color: #e88dd9; */
+        padding: 10px;
+        margin: 0;
+      }
+      .header a {
+        float: left;
+        color: rgb(68, 17, 68);
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 25px;
+        border-radius: 4px;
+      }
+      .header a.logo {
+        font-size: 25px;
+        font-weight: bold;
+        color: rgb(68, 17, 68);
+        text-shadow: 2px 2px 8px rgb(68, 17, 68);
+      }
+      .header a:hover {
+        background-color: rgb(68, 17, 68);
+        color: #ebaee1;
+      }
+      .header a.active {
+        background-color: #ebaee1;
+        color: rgb(68, 17, 68);
+        font-size: 15px;
+        padding: 0.45rem 2rem;
+      }
+      .header-right {
+        float: right;
+      }
+      @media screen and (max-width: 500px) {
+        .header a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+        .header-right {
+          float: none;
+        }
+      }
+      h1 {
+        text-align: center;
+        color: rgb(68, 17, 68);
+      }
+      button {
+        border: none;
+        /* margin: 2rem; */
+        background-color: rgb(68, 17, 68);
+        padding: 0.55rem 2rem;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        color: #ebaee1;
+        font-weight: 600;
+      }
+      section div {
+        background-color: #f1cceb;
+        padding: 0.35rem 1rem;
+        margin: 0.75rem 0;
+        border-radius: 10px;
+      }
+      a {
+        text-decoration: none;
+        color: rgb(68, 17, 68);
+      }
+      p {
+        color: rgb(68, 17, 68);
+        font-size: 18px;
+      }
+    </style>
+    <header>
+      <div class="header">
+        <a href="/" class="logo">User-Diary</a>
+        <div class="header-right">
+          <a class="active" href="/users/new">Add Book</a>
+        </div>
+      </div>
+    </header>
+    <section>
+      <h1>Users List</h1>
+      <% list.forEach(user => { %>
+      <div>
+        <a
+          href="/users/<%= user._id %>
+            "
+        >
+          <h2><%= user.name %></h2>
+        </a>
+        <p><%= user.age %></p>
+        <p><%= user.bio.substr(0,200) %></p>
+      </div>
+      <%}) %>
+    </section>
+  </body>
+</html>
