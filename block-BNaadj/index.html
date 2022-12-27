@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+        
+    </style>
+    <header>
+      <div class="header">
+        <a href="#default" class="logo">User-Diary</a>
+        <div class="header-right">
+          <a href="/" class="active">Home</a>
+        </div>
+      </div>
+    </header>
+    <form action="/users" method="POST">
+      <h2>Add User Details</h2>
+      <div>
+        <label for="user-name">User Name</label>
+        <br />
+        <input
+          type="text"
+          name="name"
+          id="user-name"
+          placeholder="Enter name"
+        />
+      </div>
+      <div>
+        <label for="user-email">User Email</label>
+        <br />
+        <input
+          type="email"
+          name="email"
+          id="user-email"
+          placeholder="name@mail.com"
+        />
+      </div>
+      <div>
+        <label for="user-age">User Age</label>
+        <br />
+        <input type="number" name="age" id="user-age" placeholder="Enter age" />
+      </div>
+      <div>
+        <label for="user-address">User Address</label>
+        <br />
+        <input
+          type="text"
+          name="address"
+          id="user-address"
+          placeholder="Enter address"
+        />
+      </div>
+      <div>
+        <label for="user-bio">User Bio</label>
+        <br />
+        <input type="text" name="bio" id="user-bio" placeholder="Enter bio" />
+      </div>
+      <div>
+        <label for="user-hobbies">User Hobbies</label>
+        <br />
+        <input
+          type="text"
+          name="hobbies[]"
+          id="user-hobbies"
+          placeholder="Enter hobbies"
+        />
+      </div>
+      <div class="btn">
+        <button>Add</button>
+      </div>
+    </form>
+  </body>
+</html>
